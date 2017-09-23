@@ -1,0 +1,10 @@
+<label>Artist Form</label><br>
+<%= form_for(@artist) do |f| %>
+  <label>Artist Name:</label><br>
+  <%= f.text_field :'name' %><br> <!-- test calls for 'artist[name]' field.  We only put 'name' b/c it's already nested in artist b/c of strong parameters -->
+
+  <label>Artist Bio:</label><br>
+  <%= f.text_area :'bio' %><br>
+
+  <%= f.submit 'Create Artist'%>
+<% end %>
